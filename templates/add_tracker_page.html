@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}Add Tracker{% endblock %}
+{% block content %}
+
+        <h1 align="left" class="card-header text-white" style="background: -webkit-linear-gradient(bottom, #8ec5fc, #e0c3fc);">Hello, {{ user.fullname }}</h1>
+
+<form method="post">
+    <h3 align="center"></h3>
+    <div class="form-group">
+
+        <h2  align="center">Add Tracker</h2>
+
+        <div align="center">
+
+
+            <br>
+
+             <label for="name">Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Enter tracker name"
+            maxlength="30"
+            style="width: 300px; border-radius: 15px; text-align: center"
+            required
+        />
+            <label for="description">Description</label>
+        <textarea
+            class="form-control"
+            id="description"
+            name="description"
+            placeholder="Enter tracker description"
+            maxlength="200"
+            style="width: 300px; border-radius: 15px; text-align: center"
+            required
+        ></textarea>
+
+
+            <label style="padding-top: 10px" for="type">Tracker Type</label>
+                        <select style="width: 300px;border-radius: 15px; text-align: center" id="type"  class="form-control"  name="type" required>
+                            <option value="Numerical">Numerical</option>
+                            <option value="Diary">Diary</option>
+                            <!--option value="Time Series">Time Series</option-->
+                            <option value="Boolean">Boolean</option>
+
+
+                        </select>
+
+          <!--label for="settings">Settings <small>(Comma seprated only for Multiple Choice)</small></label>
+        <input
+            type="text"
+            class="form-control"
+            id="settings"
+            name="settings"
+            placeholder="Enter tracker settings"
+            maxlength="80"
+            style="width: 300px; border-radius: 15px; text-align: center"
+        />
+          -->
+            <br>
+            <button type="submit" class="btn btn-primary btn-outline-secondary"><b>Add Tracker</b></button>
+
+        </div>
+
+
+    </div>
+</form>
+
+{% endblock %}
